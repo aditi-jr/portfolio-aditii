@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(96, 165, 250, 0.3)';
+                ctx.fillStyle = 'rgba(217, 119, 6, 0.35)';
                 ctx.fill();
             }
         }
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
                     if (dist < mouseConnectionDistance) {
                         const alpha = (1 - dist / mouseConnectionDistance) * 0.15;
-                        ctx.strokeStyle = `rgba(10, 102, 194, ${alpha})`;
+                        ctx.strokeStyle = `rgba(217, 119, 6, ${alpha})`;
                         ctx.lineWidth = 0.7;
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
                     if (dist < connectionDistance) {
                         const alpha = (1 - dist / connectionDistance) * 0.07;
-                        ctx.strokeStyle = `rgba(96, 165, 250, ${alpha})`;
+                        ctx.strokeStyle = `rgba(254, 243, 199, ${alpha})`;
                         ctx.lineWidth = 0.4;
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
