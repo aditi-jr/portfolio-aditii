@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillRect(0, 0, width, height);
 
             // Draw concentric rings
-            ctx.strokeStyle = 'rgba(16, 185, 129, 0.05)';
+            ctx.strokeStyle = 'rgba(59, 130, 246, 0.05)';
             ctx.lineWidth = 1;
             for (let i = 1; i <= 4; i++) {
                 ctx.beginPath();
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < slices; i++) {
                 const sliceAngle = angle - (i * 0.003);
                 const alpha = (1 - (i / slices)) * 0.15;
-                ctx.strokeStyle = `rgba(165, 248, 215, ${alpha})`;
+                ctx.strokeStyle = `rgba(165, 219, 248, ${alpha})`;
                 ctx.lineWidth = 2;
                 ctx.beginPath();
                 ctx.moveTo(cx, cy);
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Draw sweep edge line
-            ctx.strokeStyle = 'rgba(165, 248, 215, 0.35)';
+            ctx.strokeStyle = 'rgba(165, 219, 248, 0.35)';
             ctx.lineWidth = 1.5;
             ctx.beginPath();
             ctx.moveTo(cx, cy);
@@ -175,13 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Draw target dot
                     ctx.beginPath();
                     ctx.arc(bx, by, blip.size, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(165, 248, 215, ${blip.intensity})`;
+                    ctx.fillStyle = `rgba(165, 219, 248, ${blip.intensity})`;
                     ctx.fill();
 
                     // Draw outer pulsing ring
                     ctx.beginPath();
                     ctx.arc(bx, by, blip.size + (1 - blip.intensity) * 12, 0, Math.PI * 2);
-                    ctx.strokeStyle = `rgba(16, 185, 129, ${blip.intensity * 0.35})`;
+                    ctx.strokeStyle = `rgba(59, 130, 246, ${blip.intensity * 0.35})`;
                     ctx.lineWidth = 1;
                     ctx.stroke();
 
