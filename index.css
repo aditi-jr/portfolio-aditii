@@ -849,7 +849,7 @@ img {
     color: var(--color-text-muted);
 }
 
-.project-work strong {
+.project-work > strong {
     color: var(--color-text-light);
     display: block;
     margin-bottom: 8px;
