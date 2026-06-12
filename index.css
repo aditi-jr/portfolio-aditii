@@ -1303,10 +1303,24 @@ a.cert-card:hover {
     border-bottom: 1px solid rgba(165, 219, 248, 0.05);
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 60px;
+.contact-card-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: var(--color-bg-glass);
+    border: 1px solid var(--color-border-emerald);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 576px) {
+    .contact-card {
+        padding: 30px 20px;
+    }
 }
 
 .contact-subtitle {
