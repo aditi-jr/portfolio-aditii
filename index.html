@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Jairanganath B S | Portfolio</title>
+    <meta name="description" content="Portfolio of Aditi Jairanganath B S - Computer Science Graduate, Software Engineer, and Technical Business Developer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-code">&lt;</span>aditi<span class="logo-code">.dev&gt;</span>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link contact-btn">Let's Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <!-- Radar Scan Canvas Background -->
+        <canvas id="radar-canvas" class="radar-bg"></canvas>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="dev-badge-container">
+                    <span class="dev-badge"><i class="fa-solid fa-terminal"></i> Ready for opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="terminal-text" id="terminal-name">Aditi Jairanganath B S</span><span class="cursor-blink">_</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span id="tagline-text">Techno-Commercial Liaison &amp; AI Engineer</span>
+                </h2>
+                <p class="hero-description">
+                    Bridging the gap between software engineering and technical business development. Fusing a core background in Computer Science &amp; AI with client pre-sales, stakeholder negotiation, and segment value-positioning.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#projects" class="btn btn-secondary">View Work <i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-num">8.16</div>
+                    <div class="stat-label">VTU B.E. CGPA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">2</div>
+                    <div class="stat-label">Internships Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">1000+</div>
+                    <div class="stat-label">Community Scale</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll to About Section">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about_me&gt;</span>
+                <h2 class="section-title">The Techno-Commercial Mindset</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image-col">
+                    <div class="profile-card">
+                        <div class="profile-img-wrap">
+                            <img src="assets/profile.jpg" alt="Aditi Jairanganath B S Profile Picture" class="profile-img">
+                            <div class="profile-border"></div>
+                        </div>
+                        <div class="profile-socials">
+                            <a href="https://github.com/aditi-jr" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com/in/aditi-jr" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="mailto:aditijairanganath@gmail.com" aria-label="Send Email"><i class="fa-regular fa-envelope"></i></a>
+                            <a href="tel:+917019810709" aria-label="Call Phone"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text-col">
+                    <h3 class="about-subtitle">Fusing Engineering and Strategy</h3>
+                    <p class="about-paragraph">
+                        I am a Computer Science graduate who thrives at the intersection of technical architecture and business value. I have hands-on experience in software development and AI-driven workflows, paired with a techno-commercial mindset developed through client prospecting, pre-sales positioning, and stakeholder engagement.
+                    </p>
+                    <p class="about-paragraph">
+                        Having built complex generative AI models and backend infrastructures alongside presenting business cases directly to clients, I specialize in bridging communication gaps between technical teams and commercial decision-makers to accelerate adoption cycles.
+                    </p>
+
+                    <!-- Quick Info Cards -->
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-language"></i></div>
+                            <h4 class="info-title">Languages Spoken</h4>
+                            <p class="info-desc">English, Kannada, Hindi, Konkani</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h4 class="info-title">Education Highlight</h4>
+                            <p class="info-desc">B.E. Computer Science VTU (2026)</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <h4 class="info-title">Core Alignment</h4>
+                            <p class="info-desc">Technical BD &amp; Software Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="experience-section section-padding" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;professional_journey&gt;</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div class="timeline">
+                
+                <!-- Experience Item 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-row">
+                                <h3 class="role-title">Technical Business Development Intern</h3>
+                                <span class="company-name"><i class="fa-solid fa-building"></i> Abhyudaya Softech</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="meta-date"><i class="fa-solid fa-calendar-days"></i> Jan 2026 - Present</span>
+                                <span class="meta-loc"><i class="fa-solid fa-location-dot"></i> Bengaluru (Remote/Hybrid)</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="timeline-list">
+                                <li>Identified and qualified new business opportunities across AI adoption verticals through targeted market research, account research, and competitive analysis.</li>
+                                <li>Engaged directly with clients in pre-sales discussions, developing segment-specific value propositions aligned to their business goals.</li>
+                                <li>Owned the prospect to opportunity journey from initial outreach and client discovery to proposal creation and solution positioning.</li>
+                                <li>Acted as a techno-commercial liaison between technical and business stakeholders, improving communication, solution clarity, and accelerating deal cycles.</li>
+                                <li>Conducted persona-based research to identify key decision makers and map solutions to their specific business needs.</li>
+                                <li>Maintained pipeline trackers and cadence follow-ups to ensure consistent progress across active opportunities.</li>
+                                <li>Collaborated with technical teams to translate business requirements into AI-driven solutions.</li>
+                                <li>Delivered career-oriented and AI awareness sessions to students, simplifying complex technical concepts for non-technical audiences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-badge">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-row">
+                                <h3 class="role-title">Software Engineer Intern (Python &amp; AI)</h3>
+                                <span class="company-name"><i class="fa-solid fa-building"></i> Genesis Training</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="meta-date"><i class="fa-solid fa-calendar-days"></i> Feb 2026 - May 2026</span>
+                                <span class="meta-loc"><i class="fa-solid fa-location-dot"></i> Bengaluru</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <div class="timeline-highlight">
+                                <i class="fa-solid fa-award"></i> <strong>Key Outcome:</strong> Completed the intensive 15-week industry-ready program with a performance evaluation score of <strong>97%</strong>.
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Built real-world applications using Python, machine learning, and AI concepts, focusing on hands-on practical problem-solving.</li>
+                                <li>Applied data handling, analytics, and modeling techniques utilizing NumPy, Pandas, Scikit-learn, TensorFlow, and Keras.</li>
+                                <li>Gained hands-on exposure to cloud infrastructure integration (AWS) and deployment fundamentals.</li>
+                                <li>Collaborated with peers in a structured, multi-member agile team environment simulating industry development workflows (Scrum iterations).</li>
+                                <li>Strengthened software debugging, architectural structure, and analytical thinking through continuous assessments.</li>
+                                <li>Aligned capstone project implementations with enterprise expectations for software engineering and AI specialist roles.</li>
+                                <li>Contributed to training program planning, designing pathways that bridge student academic learning with industry requirements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section-padding" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;featured_work&gt;</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1: RecommendMe -->
+                <div class="project-card reveal">
+                    <div class="project-card-inner">
+                        <div class="project-badge"><i class="fa-solid fa-star"></i> Featured</div>
+                        <div class="project-icon-top"><i class="fa-solid fa-magnifying-glass-dollar"></i></div>
+                        <h3 class="project-title">RecommendMe</h3>
+                        <h4 class="project-desc-short">AI-Driven Conversational Shopping Assistant</h4>
+                        <p class="project-details">
+                            A conversational AI product that replaces hours of search engine browsing by understanding user shopping needs in plain natural language. It queries database vectors to return curated, context-aware product recommendations accompanied by live pricing updates and rating lists.
+                        </p>
+                        <div class="project-work">
+                            <strong>My Implementation Role:</strong>
+                            <ul>
+                                <li>Designed and implemented the core security and user authentication layer.</li>
+                                <li>Migrated the legacy authentication flow to <strong>Supabase Auth</strong> without service interruption.</li>
+                                <li>Built <strong>Redis-based rate limiting</strong> and login protection to mitigate brute-force attacks.</li>
+                                <li>Secured media file uploads and enforced strict row-level data security.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="proj-link-disabled"><i class="fa-brands fa-github"></i> Private Repo</span>
+                            <span class="proj-link-disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo Internal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: MedGAN -->
+                <div class="project-card reveal">
+                    <div class="project-card-inner">
+                        <div class="project-badge"><i class="fa-solid fa-star"></i> Featured</div>
+                        <div class="project-icon-top"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="project-title">MedGAN</h3>
+                        <h4 class="project-desc-short">AI Medical MRI Imaging &amp; Diagnostic Web App</h4>
+                        <p class="project-details">
+                            A full-stack diagnostic AI application focused on brain tumor detection and data augmentation. It helps medical labs expand constrained training datasets and aids radiologists with real-time classification overlays.
+                        </p>
+                        <div class="project-work">
+                            <strong>My Implementation Role:</strong>
+                            <ul>
+                                <li>Designed and trained <strong>Generative Adversarial Networks (GANs)</strong>, increasing available training datasets by <strong>~3×</strong>.</li>
+                                <li>Implemented a <strong>Vision Transformer (ViT)</strong> model for precise multiclass tumor classification.</li>
+                                <li>Built a web application interface using <strong>Flask</strong> to support real-time user scan uploads.</li>
+                                <li>Created interactive visualizer components to display classification confidence scores.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">GANs</span>
+                            <span class="tech-tag">Vision Transformers</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="proj-link-disabled"><i class="fa-brands fa-github"></i> Project Repo</span>
+                            <span class="proj-link-disabled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Web Demo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section-padding" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;tech_and_business_stack&gt;</span>
+                <h2 class="section-title">Technical &amp; Business Skills</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Skills Category Filter -->
+            <div class="skills-nav">
+                <button class="skill-tab active" data-category="all">All Stack</button>
+                <button class="skill-tab" data-category="programming">Languages</button>
+                <button class="skill-tab" data-category="frameworks">Frameworks</button>
+                <button class="skill-tab" data-category="databases">Databases &amp; Cloud</button>
+                <button class="skill-tab" data-category="operations">Tools</button>
+                <button class="skill-tab" data-category="business">Business &amp; Analytics</button>
+                <button class="skill-tab" data-category="soft">Soft Skills</button>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid" id="skills-grid">
+                
+                <!-- Category: Programming -->
+                <div class="skill-item" data-category="programming">
+                    <div class="skill-title-row">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="programming">
+                    <div class="skill-title-row">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="programming">
+                    <div class="skill-name">TypeScript</div>
+                </div>
+                <div class="skill-item" data-category="programming">
+                    <div class="skill-name">C / C++</div>
+                </div>
+                <div class="skill-item" data-category="programming">
+                    <div class="skill-name">HTML5 / CSS3</div>
+                </div>
+
+                <!-- Category: Frameworks & Libraries -->
+                <div class="skill-item" data-category="frameworks">
+                    <div class="skill-title-row">
+                        <span class="skill-name">PyTorch</span>
+                        <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="frameworks">
+                    <div class="skill-title-row">
+                        <span class="skill-name">FastAPI / Flask</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="frameworks">
+                    <div class="skill-name">React.js</div>
+                </div>
+                <div class="skill-item" data-category="frameworks">
+                    <div class="skill-name">Express.js</div>
+                </div>
+                <div class="skill-item" data-category="frameworks">
+                    <div class="skill-name">TensorFlow / Keras</div>
+                </div>
+                <div class="skill-item" data-category="frameworks">
+                    <div class="skill-name">Pandas / NumPy / Scikit-learn</div>
+                </div>
+
+                <!-- Category: Databases & Cloud -->
+                <div class="skill-item" data-category="databases">
+                    <div class="skill-title-row">
+                        <span class="skill-name">Supabase</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="databases">
+                    <div class="skill-name">Redis</div>
+                </div>
+                <div class="skill-item" data-category="databases">
+                    <div class="skill-name">Firebase</div>
+                </div>
+                <div class="skill-item" data-category="databases">
+                    <div class="skill-name">MongoDB</div>
+                </div>
+                <div class="skill-item" data-category="databases">
+                    <div class="skill-name">MySQL</div>
+                </div>
+                <div class="skill-item" data-category="databases">
+                    <div class="skill-name">AWS Cloud Essentials</div>
+                </div>
+
+                <!-- Category: Operations & Tools -->
+                <div class="skill-item" data-category="operations">
+                    <div class="skill-name">Git &amp; GitHub</div>
+                </div>
+                <div class="skill-item" data-category="operations">
+                    <div class="skill-name">VS Code</div>
+                </div>
+                <div class="skill-item" data-category="operations">
+                    <div class="skill-name">Salesforce Trailhead</div>
+                </div>
+                <div class="skill-item" data-category="operations">
+                    <div class="skill-name">MS Office / Google Workspace</div>
+                </div>
+
+                <!-- Category: Business & Analytics -->
+                <div class="skill-item" data-category="business">
+                    <div class="skill-title-row">
+                        <span class="skill-name">Business Development &amp; Outreach</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="business">
+                    <div class="skill-title-row">
+                        <span class="skill-name">Competitive &amp; Market Analysis</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="business">
+                    <div class="skill-name">Pre-Sales &amp; Proposal Drafting</div>
+                </div>
+                <div class="skill-item" data-category="business">
+                    <div class="skill-name">Persona &amp; Account Research</div>
+                </div>
+                <div class="skill-item" data-category="business">
+                    <div class="skill-name">Pipeline Tracking &amp; CRM Ops</div>
+                </div>
+
+                <!-- Category: Soft Skills -->
+                <div class="skill-item" data-category="soft">
+                    <div class="skill-title-row">
+                        <span class="skill-name">Leadership &amp; Ownership</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-progress-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-item" data-category="soft">
+                    <div class="skill-name">Technical Communication</div>
+                </div>
+                <div class="skill-item" data-category="soft">
+                    <div class="skill-name">Public Speaking &amp; Presentations</div>
+                </div>
+                <div class="skill-item" data-category="soft">
+                    <div class="skill-name">Stakeholder Coordination</div>
+                </div>
+                <div class="skill-item" data-category="soft">
+                    <div class="skill-name">Adaptability &amp; Rapid Learning</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section section-padding" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;academic_foundations&gt;</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="education-grid">
+                
+                <!-- B.E. Degree -->
+                <div class="edu-card reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="edu-meta">
+                        <span class="edu-year">2022 - 2026</span>
+                        <span class="edu-score"><i class="fa-solid fa-award"></i> CGPA: 8.16 / 10.0</span>
+                    </div>
+                    <h3 class="edu-degree">Bachelor of Engineering (B.E.)</h3>
+                    <h4 class="edu-major">Computer Science and Engineering</h4>
+                    <p class="edu-inst">KLE Institute of Technology, Hubballi</p>
+                    <p class="edu-board">Visvesvaraya Technological University (VTU), Belagavi</p>
+                </div>
+
+                <!-- Pre-University -->
+                <div class="edu-card reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+                    <div class="edu-meta">
+                        <span class="edu-year">2020 - 2022</span>
+                        <span class="edu-score"><i class="fa-solid fa-award"></i> Score: 82.00%</span>
+                    </div>
+                    <h3 class="edu-degree">Pre-University Course (PUC)</h3>
+                    <h4 class="edu-major">PCMB (Physics, Chemistry, Mathematics, Biology)</h4>
+                    <p class="edu-inst">Premier PU College, Karwar</p>
+                    <p class="edu-board">Department of Pre-University Education, Karnataka</p>
+                </div>
+
+                <!-- School -->
+                <div class="edu-card reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="edu-meta">
+                        <span class="edu-year">Graduated 2020</span>
+                        <span class="edu-score"><i class="fa-solid fa-award"></i> Score: 92.96%</span>
+                    </div>
+                    <h3 class="edu-degree">Secondary School Leaving Certificate (SSLC)</h3>
+                    <h4 class="edu-major">General Curriculum</h4>
+                    <p class="edu-inst">Educare English Medium School, Amadalli, Karwar</p>
+                    <p class="edu-board">Karnataka School Examination and Assessment Board (KSEAB)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Leadership Section -->
+    <section class="achievements-section section-padding" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;leadership_and_credentials&gt;</span>
+                <h2 class="section-title">Achievements &amp; Leadership</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Leadership Roles Row -->
+            <h3 class="subsection-title"><i class="fa-solid fa-people-roof"></i> Leadership &amp; Community Building</h3>
+            <div class="leadership-grid">
+                
+                <!-- GDG Hubli -->
+                <div class="leadership-card reveal">
+                    <div class="lead-header">
+                        <h4 class="lead-role">On-Site Coordination Lead</h4>
+                        <span class="lead-org">Google Developer Group (GDG) Hubli</span>
+                    </div>
+                    <div class="lead-meta">2024 - 2025 | Hubballi</div>
+                    <ul class="lead-bullets">
+                        <li>Drove partnership acquisition by identifying and pitching KLE Tech as the primary sponsor, owning the commercial conversation end-to-end.</li>
+                        <li>Built and scaled on-site logistics and operations for DevFest 2025 and Community Hackathons, managing <strong>1000+</strong> attendees and a <strong>30+</strong> member volunteer team.</li>
+                        <li>Took ownership of real-time problem solving, making fast, independent decisions under high-pressure event conditions.</li>
+                    </ul>
+                </div>
+
+                <!-- OSCode -->
+                <div class="leadership-card reveal">
+                    <div class="lead-header">
+                        <h4 class="lead-role">Chapter Lead</h4>
+                        <span class="lead-org">OSCode KLEIT Chapter</span>
+                    </div>
+                    <div class="lead-meta">2024 - 2025 | Hubballi</div>
+                    <ul class="lead-bullets">
+                        <li>Launched the campus chapter from zero to <strong>180+</strong> active members through strategic marketing and peer engagement.</li>
+                        <li>Acquired industry expert speakers via cold outreach, pitching chapter benefits to secure confirmations.</li>
+                        <li>Operated with full autonomy, driving membership growth with measurable outcomes.</li>
+                    </ul>
+                </div>
+
+                <!-- Codenex -->
+                <div class="leadership-card reveal">
+                    <div class="lead-header">
+                        <h4 class="lead-role">Lead On-Site Coordinator</h4>
+                        <span class="lead-org">Codenex Coding Club, KLEIT</span>
+                    </div>
+                    <div class="lead-meta">Dec 2024 - Nov 2025 | Hubballi</div>
+                    <ul class="lead-bullets">
+                        <li>Managed club operations and fostered a technical developer network of over <strong>80+</strong> students.</li>
+                        <li>Organized hands-on coding workshops, mentorship sessions, and technical seminars.</li>
+                        <li>Delivered induction presentations to juniors on starting out in tech, AI tools usage, and language selection.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Certifications Showcase Grid -->
+            <h3 class="subsection-title" style="margin-top: 50px;"><i class="fa-solid fa-file-signature"></i> Professional Certifications</h3>
+            <div class="certs-grid">
+                
+                <!-- Cert 1: Genesis -->
+                <div class="cert-card reveal">
+                    <div class="cert-img-container">
+                        <img src="assets/cert_genesis.jpg" alt="Genesis Python &amp; AI Internship Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <h4 class="cert-name">Python &amp; AI Internship Certificate</h4>
+                        <p class="cert-issuer">Genesis Training (Remote/15 Weeks)</p>
+                        <p class="cert-date">Issued May 2026 | Performance Score: 97/100</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Udemy -->
+                <div class="cert-card reveal">
+                    <div class="cert-img-container">
+                        <img src="assets/cert_udemy.jpg" alt="Udemy Business Analyst Course Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <h4 class="cert-name">Ultimate Technical Skills for IT Business Analyst</h4>
+                        <p class="cert-issuer">Udemy (Instructor Mehul Thanki)</p>
+                        <p class="cert-date">Issued September 2025 | ID: UC-41d497da-11b2-4bd5-80d1-49075e0f876a</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Hack Karnataka -->
+                <div class="cert-card reveal">
+                    <div class="cert-img-container">
+                        <img src="assets/cert_hack_karnataka.jpg" alt="Hack Karnataka Volunteer Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <h4 class="cert-name">Hack Karnataka National Hackathon Volunteer</h4>
+                        <p class="cert-issuer">GDG Hubli &amp; KLE Technological University</p>
+                        <p class="cert-date">Issued November 2025 | 30-Hour Volunteer Coordination</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4: OSCode Appointment -->
+                <div class="cert-card reveal">
+                    <div class="cert-img-container">
+                        <img src="assets/cert_oscode.jpg" alt="OSCode Lead Appointment Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <h4 class="cert-name">OSCode KLEIT Chapter Lead Appointment</h4>
+                        <p class="cert-issuer">OSCode Global Organization</p>
+                        <p class="cert-date">Issued April 2025 | Term: 2025 - 2026 Academic Year</p>
+                    </div>
+                </div>
+
+                <!-- Cert 5: Accenture Data -->
+                <div class="cert-card reveal">
+                    <div class="cert-content-only">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h4 class="cert-name">Data Analytics &amp; Visualization Job Simulation</h4>
+                        <p class="cert-issuer">Accenture North America / Forage Platform</p>
+                        <p class="cert-date">Issued September 2024</p>
+                    </div>
+                </div>
+
+                <!-- Cert 6: Accenture Project Management -->
+                <div class="cert-card reveal">
+                    <div class="cert-content-only">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h4 class="cert-name">Project Management Job Simulation</h4>
+                        <p class="cert-issuer">Accenture North America / Forage Platform</p>
+                        <p class="cert-date">Issued September 2024</p>
+                    </div>
+                </div>
+
+                <!-- Cert 7: LinkedIn Learning -->
+                <div class="cert-card reveal">
+                    <div class="cert-content-only">
+                        <div class="cert-badge-icon"><i class="fa-solid fa-users-rectangle"></i></div>
+                        <h4 class="cert-name">Managing Project Stakeholders</h4>
+                        <p class="cert-issuer">LinkedIn Learning</p>
+                        <p class="cert-date">Issued August 2024</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;get_in_touch&gt;</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                
+                <!-- Contact Info -->
+                <div class="contact-info-col reveal">
+                    <h3 class="contact-subtitle">Start a Conversation</h3>
+                    <p class="contact-desc">
+                        Whether you are looking for a techno-commercial liaison to lead AI pre-sales, a software engineer with client-facing capabilities, or simply want to chat about developer communities—feel free to drop a message or reach out on socials.
+                    </p>
+
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email Me</span>
+                                <a href="mailto:aditijairanganath@gmail.com" class="contact-link-val">aditijairanganath@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Call / WhatsApp</span>
+                                <a href="tel:+917019810709" class="contact-link-val">+91 70198 10709</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-link-val">Hubballi, Karnataka, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-row">
+                        <a href="https://linkedin.com/in/aditi-jr" target="_blank" class="social-circle" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/aditi-jr" target="_blank" class="social-circle" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-col reveal">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder="Opportunity details / Project Discussion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Hi Aditi, I'd love to connect..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copy">
+                    &copy; 2026 Aditi Jairanganath B S. All rights reserved.
+                </p>
+                <p class="footer-design">
+                    Built with <i class="fa-solid fa-heart heart-pulse"></i> and CSS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Lightbox Modal for Certificate Previews -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Certificate Preview">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+</body>
+</html>
