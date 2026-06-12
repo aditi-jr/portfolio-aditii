@@ -1217,6 +1217,15 @@ img {
     transition: var(--transition-smooth);
 }
 
+a.cert-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.cert-card:hover {
+    color: inherit;
+}
+
 .cert-img-container {
     width: 100%;
     aspect-ratio: 1.4;
