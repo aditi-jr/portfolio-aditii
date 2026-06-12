@@ -80,124 +80,111 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================================================
-       CANVAS RADAR SCAN SIMULATION
+       CANVAS CONSTELLATION NETWORK SIMULATION (LINKEDIN VIBES)
        ========================================================================== */
     const canvas = document.getElementById('radar-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
-        let width, height, cx, cy, maxRadius;
-        let angle = 0;
-        
-        // Target blips on the radar
-        const blips = [
-            { r: 0.25, theta: 45, size: 5, active: false, intensity: 0 },
-            { r: 0.55, theta: 135, size: 6, active: false, intensity: 0 },
-            { r: 0.75, theta: 210, size: 8, active: false, intensity: 0 },
-            { r: 0.40, theta: 290, size: 4, active: false, intensity: 0 },
-            { r: 0.65, theta: 330, size: 6, active: false, intensity: 0 }
-        ];
+        let width, height;
+        const particles = [];
+        const particleCount = 70;
+        const connectionDistance = 110;
+        const mouseConnectionDistance = 150;
+        const mouse = { x: null, y: null };
 
         function resizeCanvas() {
             const rect = canvas.parentElement.getBoundingClientRect();
             width = canvas.width = rect.width;
             height = canvas.height = rect.height;
-            cx = width / 2;
-            cy = height / 2;
-            // Limit sweep radius to fit screen nicely
-            maxRadius = Math.min(width, height) * 0.45;
+            initParticles();
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(96, 165, 250, 0.3)';
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles.length = 0;
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
         }
 
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        function drawRadar() {
-            // Faint trailing fill to draw trailing arc effects
-            ctx.fillStyle = 'rgba(2, 9, 6, 0.06)';
-            ctx.fillRect(0, 0, width, height);
+        window.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
 
-            // Draw concentric rings
-            ctx.strokeStyle = 'rgba(59, 130, 246, 0.05)';
-            ctx.lineWidth = 1;
-            for (let i = 1; i <= 4; i++) {
-                ctx.beginPath();
-                ctx.arc(cx, cy, maxRadius * (i / 4), 0, Math.PI * 2);
-                ctx.stroke();
-            }
+        window.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
 
-            // Draw crosshairs
-            ctx.beginPath();
-            ctx.moveTo(cx - maxRadius, cy);
-            ctx.lineTo(cx + maxRadius, cy);
-            ctx.moveTo(cx, cy - maxRadius);
-            ctx.lineTo(cx, cy + maxRadius);
-            ctx.stroke();
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
 
-            // Increment sweep angle
-            angle = (angle + 0.01) % (Math.PI * 2);
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.update();
+                p.draw();
 
-            // Draw sweep gradient arc (multiple trailing slices)
-            const slices = 40;
-            for (let i = 0; i < slices; i++) {
-                const sliceAngle = angle - (i * 0.003);
-                const alpha = (1 - (i / slices)) * 0.15;
-                ctx.strokeStyle = `rgba(165, 219, 248, ${alpha})`;
-                ctx.lineWidth = 2;
-                ctx.beginPath();
-                ctx.moveTo(cx, cy);
-                ctx.lineTo(cx + Math.cos(sliceAngle) * maxRadius, cy + Math.sin(sliceAngle) * maxRadius);
-                ctx.stroke();
-            }
-
-            // Draw sweep edge line
-            ctx.strokeStyle = 'rgba(165, 219, 248, 0.35)';
-            ctx.lineWidth = 1.5;
-            ctx.beginPath();
-            ctx.moveTo(cx, cy);
-            ctx.lineTo(cx + Math.cos(angle) * maxRadius, cy + Math.sin(angle) * maxRadius);
-            ctx.stroke();
-
-            // Update and draw blips
-            blips.forEach(blip => {
-                // Radial coordinates
-                const bx = cx + Math.cos(blip.theta * Math.PI / 180) * (blip.r * maxRadius);
-                const by = cy + Math.sin(blip.theta * Math.PI / 180) * (blip.r * maxRadius);
-                
-                // Check if sweep line matches blip angle (in radians)
-                const blipRad = (blip.theta * Math.PI / 180) % (Math.PI * 2);
-                const diff = Math.abs(angle - blipRad);
-                
-                if (diff < 0.05) {
-                    blip.active = true;
-                    blip.intensity = 1.0;
-                }
-
-                if (blip.active) {
-                    // Draw target dot
-                    ctx.beginPath();
-                    ctx.arc(bx, by, blip.size, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(165, 219, 248, ${blip.intensity})`;
-                    ctx.fill();
-
-                    // Draw outer pulsing ring
-                    ctx.beginPath();
-                    ctx.arc(bx, by, blip.size + (1 - blip.intensity) * 12, 0, Math.PI * 2);
-                    ctx.strokeStyle = `rgba(59, 130, 246, ${blip.intensity * 0.35})`;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-
-                    // Fade blip
-                    blip.intensity -= 0.005;
-                    if (blip.intensity <= 0) {
-                        blip.active = false;
-                        blip.intensity = 0;
+                // Connect to mouse
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+                    if (dist < mouseConnectionDistance) {
+                        const alpha = (1 - dist / mouseConnectionDistance) * 0.15;
+                        ctx.strokeStyle = `rgba(10, 102, 194, ${alpha})`;
+                        ctx.lineWidth = 0.7;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.stroke();
                     }
                 }
-            });
 
-            requestAnimationFrame(drawRadar);
+                // Connect to other particles
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < connectionDistance) {
+                        const alpha = (1 - dist / connectionDistance) * 0.07;
+                        ctx.strokeStyle = `rgba(96, 165, 250, ${alpha})`;
+                        ctx.lineWidth = 0.4;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animate);
         }
 
-        drawRadar();
+        animate();
     }
 
 

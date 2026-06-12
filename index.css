@@ -2,20 +2,20 @@
    DESIGN SYSTEM & VARIABLES
    ========================================================================== */
 :root {
-    /* Color Palette - Sleek Royal Blue & Indigo */
-    --color-bg-deep: #050B1A;       /* Deep Navy Background */
-    --color-bg-darker: #020617;     /* Slate 950 Near-Black */
-    --color-bg-card: #0B1528;       /* Container Dark Navy */
-    --color-bg-glass: rgba(11, 21, 40, 0.55);
+    /* Color Palette - Sleek Professional Navy & LinkedIn Blue */
+    --color-bg-deep: #0A192F;       /* Deep Navy Blue */
+    --color-bg-darker: #020C1B;     /* Very Dark Slate Navy */
+    --color-bg-card: #112240;       /* Lighter Navy for Card Contrast */
+    --color-bg-glass: rgba(17, 34, 64, 0.65);
     
-    --color-accent-mint: #A5DBF8;   /* Ice Blue Accent */
-    --color-accent-emerald: #3B82F6;/* Royal Blue Accent */
-    --color-accent-dark: #1D4ED8;   /* Dark Blue */
-    --color-border-emerald: rgba(165, 219, 248, 0.12);
-    --color-border-glow: rgba(59, 130, 246, 0.25);
+    --color-accent-mint: #60A5FA;   /* Light Ice Blue */
+    --color-accent-emerald: #0A66C2;/* LinkedIn Brand Blue */
+    --color-accent-dark: #004182;   /* Darker LinkedIn Blue */
+    --color-border-emerald: rgba(96, 165, 250, 0.12); /* Soft light blue border */
+    --color-border-glow: rgba(10, 102, 194, 0.3);    /* LinkedIn blue glow */
     
     --color-text-light: #F8FAFC;    /* Slate 50 Light Text */
-    --color-text-muted: #94A3B8;    /* Slate 400 Muted Text */
+    --color-text-muted: #8892B0;    /* Slate/Navy Muted Text */
     --color-text-dark: #1E293B;     /* Slate 800 Dark Text */
     
     /* Fonts */
